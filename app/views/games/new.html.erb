@@ -1,0 +1,10 @@
+<h1>New game</h1>
+<div class="letter"><%= @letters %></div>
+<p>What is the longest word you can find?</p>
+<form action="/score" method="post">
+  <input type="text" name="user_input">
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+</form>
+<%#= link_to "Play again", about_sc %>
